@@ -1,0 +1,29 @@
+'''
+
+#1
+
+listaInt = eval(input())
+soma = 0 
+pos = 0 
+neg = 0 
+
+neg = [x for x in listaInt if x < 0] 
+pos = [x for x in listaInt if x > 0]
+
+neg = sum(neg)
+pos = sum(pos)
+soma = sum(listaInt)
+
+print("{} {} {}".format(soma, pos, neg))
+
+'''
+
+#2
+
+nomes = eval(input())
+salario = eval(input())
+
+nomes = [x.upper() for x in nomes]
+
+for i in range(len(nomes)):
+	print("{} ganha {:.1f}".format(nomes[i],salario[i]))

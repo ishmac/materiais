@@ -1,0 +1,41 @@
+quadrado de um numero:
+quadrado :: Int -> Int
+quadrado x = x*x
+----------------------------------
+
+noveFora
+novesFora :: Int -> Int
+novesFora x = x-9
+----------------------------------
+
+multi
+multiAB :: Int -> Int -> Int
+multiAB a b = a*b
+---------------------------------
+
+maior2
+maior2 :: Int -> Int -> Int
+maior2 a b = if a >= b then a else b 
+---------------------------------
+
+maior3
+maior3A :: Int -> Int -> Int -> Int
+maior3A a b c
+ |a>= b && a >= c = a
+ |b> a && b > c = b
+ |otherwise = c
+ -------------------------------
+ 
+ maior3B
+maior2 :: Int -> Int ->Int
+maior3B:: Int-> Int -> Int -> Int
+maior2 a b = if a >= b then a else b
+maior3B a b c = maior2(maior2 a b) c
+--------------------------------
+
+menor3
+menor3 :: Int -> Int -> Int -> Int
+menor3 a b c
+ |a<= b && a <= c = a
+ |b< a && b < c = b
+ |otherwise = c

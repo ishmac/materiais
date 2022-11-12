@@ -27,3 +27,61 @@ ordena a b c
   |b < a && b < c && c < a = (b, c, a)
   |c < a && c < b && a < b = (c, a, b)
   |c < a && c < b && b < a = (c, b, a)
+________________________________
+
+fatorial :: Int -> Int
+fatorial a
+  |a == 0 = 1
+  |a > 0 = a * (fatorial (a-1))
+________________________________
+
+ordena :: Int -> Int -> Int -> (Int, Int, Int)
+ordena a b c
+  |a >= b && a >= c && b > c = (a, b, c)
+  |a >= b && a >= c && c > b = (a, c, b)
+  |b > a && b > c && a > c = (b, a, c)
+  |b > a && b > c && c > a = (b, c, a)
+  |c > a && c > b && a > b = (c, a, b)
+  |c > a && c > b && b > a = (c, b, a)
+________________________________
+
+fibonacci :: Int -> Int
+fibonacci x
+  |x <= 1 = x
+  |otherwise = (fibonacci(x-1)) + (fibonacci(x-2))
+________________________________
+
+triangula :: Int -> Int -> Int -> Bool
+triangula a b c
+  |abs(b - c) < a && a < b + c = True
+  |abs(a - c) < b && b < a + c = True
+  |abs(a - b) < c && c < a + b = True
+  |otherwise = False
+_______________________________
+
+tamanho :: [Int] -> Int
+tamanho [] = 0
+tamanho (x:xs) = 1 + (tamanho xs)
+_______________________________
+
+maior (x:[]) = x
+maior (x:y:xs)
+  |x < y = maior(y:xs)
+  |x > y = maior(x:xs)
+_______________________________
+
+verifica x [] = False
+verifica x (y:ys)
+  |x == y = True
+  |otherwise = verifica x ys
+_______________________________
+
+maiores x [] = 0
+maiores x (y:ys)
+  |x < y = 1 + (maiores x ys)
+  |otherwise = maiores x ys 
+______________________________
+
+soma :: [Int] -> Int
+soma [] = 0
+soma (x:xs) = x + (soma xs)

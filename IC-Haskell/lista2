@@ -1,8 +1,11 @@
+Questão 1
+
 maior_de_2::Int->Int->Int
 maior_de_2 a b
   |a >= b = a
   |otherwise = b
 _________________________________  
+Questão 2 
 
 maior_de_2::Int->Int->Int
 maior_de_2 a b
@@ -11,6 +14,7 @@ maior_de_2 a b
 maior_de_3 :: Int -> Int -> Int -> Int
 maior_de_3 a b c = maior_de_2(maior_de_2 a b) c
 __________________________________
+Questão 3 
 
 maior_de_3::Int->Int->Int->Int
 maior_de_3 a b c
@@ -18,6 +22,7 @@ maior_de_3 a b c
   |b > a && b > c = b
   |otherwise = c
 ________________________________
+Questão 4
 
 Ordem crescente
 ordena :: Int -> Int -> Int -> (Int, Int, Int)
@@ -29,12 +34,14 @@ ordena a b c
   |c < a && c < b && a < b = (c, a, b)
   |c < a && c < b && b < a = (c, b, a)
 ________________________________
+Questão 5
 
 fatorial :: Int -> Int
 fatorial a
   |a == 0 = 1
   |a > 0 = a * (fatorial (a-1))
 ________________________________
+Questão 6
 
 Ordem decrescente
 ordena :: Int -> Int -> Int -> (Int, Int, Int)
@@ -46,12 +53,14 @@ ordena a b c
   |c > a && c > b && a > b = (c, a, b)
   |c > a && c > b && b > a = (c, b, a)
 ________________________________
+Questão 7
 
 fibonacci :: Int -> Int
 fibonacci x
   |x <= 1 = x
   |otherwise = (fibonacci(x-1)) + (fibonacci(x-2))
 ________________________________
+Questão 8
 
 triangula :: Int -> Int -> Int -> Bool
 triangula a b c
@@ -60,29 +69,51 @@ triangula a b c
   |abs(a - b) < c && c < a + b = True
   |otherwise = False
 _______________________________
+Questão 9
+
+multPos::Int->Int->Int
+multPos a b 
+  |b == 1 = a
+  |otherwise = a + multPos a (abs(b)-1)
+
+multNeg::Int->Int->Int
+multNeg a b 
+  |b == 1 = -a
+  |otherwise = -a + multNeg a (abs(b)-1)
+
+multiplica::Int->Int->Int
+multtiplica a b 
+  |b >= 0 = multPos a b
+  |otherwise = multNeg a b
+_______________________________
+Questão 10
 
 tamanho :: [Int] -> Int
 tamanho [] = 0
 tamanho (x:xs) = 1 + (tamanho xs)
 _______________________________
+Questão 12
 
 maior (x:[]) = x
 maior (x:y:xs)
   |x < y = maior(y:xs)
   |x > y = maior(x:xs)
 _______________________________
+Questão 13
 
 verifica x [] = False
 verifica x (y:ys)
   |x == y = True
   |otherwise = verifica x ys
 _______________________________
+Questão 17
 
 maiores x [] = 0
 maiores x (y:ys)
   |x < y = 1 + (maiores x ys)
   |otherwise = maiores x ys 
 ______________________________
+Questão 20
 
 soma :: [Int] -> Int
 soma [] = 0

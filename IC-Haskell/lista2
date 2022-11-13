@@ -92,6 +92,13 @@ tamanho :: [Int] -> Int
 tamanho [] = 0
 tamanho (x:xs) = 1 + (tamanho xs)
 _______________________________
+Questão 11
+
+reverte :: [Int] -> [Int]
+reverte [] = []
+reverte (x:xs) = reverte(xs) ++ (x :[])
+
+_______________________________
 Questão 12
 
 maior (x:[]) = x
